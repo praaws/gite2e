@@ -1,3 +1,6 @@
+@Library('your-shared-library') _
+
+
 pipeline{
     agent any
 
@@ -5,7 +8,10 @@ pipeline{
         stage('Git checkout stage'){
             steps{
                 script{
-                    git branch: 'main', url: 'https://github.com/praaws/gite2e.git'
+                    checkoutGit(
+                        repositoryUrl = https://github.com/praaws/gite2e.git,
+                        branch = main
+                    )
                 }
             }
         }
