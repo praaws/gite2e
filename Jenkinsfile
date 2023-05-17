@@ -9,8 +9,8 @@ pipeline{
             steps{
                 script{
                     checkoutGit(
-                        repositoryUrl = https://github.com/praaws/gite2e.git,
-                        branch = main
+                        repositoryUrl = "https://github.com/praaws/gite2e.git",
+                        branch = "main"
                     )
                 }
             }
